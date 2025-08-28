@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>AudioSAM: A Bioacoustics Foundation Model for Automatic Annotation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -50,36 +50,6 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </nav>
 
 
@@ -88,32 +58,15 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">AudioSAM: A Bioacoustics Foundation Model for Automatic Annotation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://jonbarron.info">Author</a><sup>1</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Affiliation</span>
           </div>
 
           <div class="column has-text-centered">
@@ -178,21 +131,16 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img id="teaser" src="./static/images/animals.png" alt="AudioSAM">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">AudioSAM</span> contains a large collection of bioacoustic data with over 1,000,000 calls from over 500 species, and is a foundation model for automatic annotation.
       </h2>
     </div>
   </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -247,7 +195,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -258,31 +206,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Bioacoustic monitoring is essential for ecological research and wildlife conservation, enabling the tracking of species and ecosystem health at scale without physical intervention. Yet, automated analysis of bioacoustic data remains challenging due to complex soundscapes with overlapping species, environmental variability, and high background noise.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            We introduce a self-supervised learning framework tailored to large-scale bioacoustic recordings. Our method adapts the Masked Autoencoder paradigm to animal vocalizations and is trained on over 10,000 hours of terrestrial and marine recordings spanning 500 species. We demonstrate significant improvements over traditional methods in species identification, vocalization detection, and acoustic event classification.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Our contributions are threefold: (1) release of a 1B-parameter Vision Transformer encoder optimized for long bioacoustic sequences, (2) the largest bioacoustics dataset with standardized annotations, and (3) state of the art results on bioacoustic tasks including event detection and species classification.
           </p>
         </div>
       </div>
@@ -290,7 +220,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -298,7 +228,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -307,48 +237,180 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+
+
+    <!-- Dataset and Data Augmentation Section -->
     <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Datasets and Data Augmentation</h2>
 
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+        <div class="content has-text-centered">
+          <img src="./static/images/dataset.png" alt="Overview of the bioacoustics dataset" class="image" style="display: block; margin-left: auto; margin-right: auto; max-width: 1000px; width: 100%; margin-bottom: 1.5em;">
+          <p class="is-size-6">
+            <em>Figure: Overview of the unified bioacoustics dataset spanning diverse species and environments.</em>
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+        
+        <div class="content has-text-justified">
+          <p>
+            We have assembled the largest unified bioacoustics dataset to date, comprising over 1 million annotated vocalizations from more than 500 species across 30+ genera. Our dataset consolidates 30+ existing bioacoustics datasets under a unified annotation framework, enabling unprecedented scale and diversity in bioacoustic research.
+          </p>
+          
+          <h3 class="title is-4">Dataset Composition</h3>
+          <ul>
+            <li><strong>Scale:</strong> Over 1,000,000 annotated vocalizations</li>
+            <li><strong>Diversity:</strong> 500+ species from 30+ genera</li>
+            <li><strong>Coverage:</strong> Terrestrial and marine environments</li>
+            <li><strong>Unified Framework:</strong> 30+ datasets consolidated under consistent annotations</li>
+          </ul>
+          
+          <h3 class="title is-4">Data Types</h3>
+          
+          <div class="columns is-centered">
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-5">Short Audio Files</h4>
+                <p>
+                  Individual files containing single vocalization events, ideal for training precise detection and classification models.
+                </p>
+                <img src="./static/images/shortAudio.png" alt="Short audio example" class="image">
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="content">
+                <h4 class="title is-5">Long Audio Sequences</h4>
+                <p>
+                  Extended recordings with multiple overlapping calls and complex soundscapes, enabling training on realistic field conditions.
+                </p>
+                <img src="./static/images/longAudio.png" alt="Long audio example" class="image">
+              </div>
+            </div>
           </div>
+          
+          <div class="content has-text-justified">
+            <ul>
+              <li><strong>Multi-species Recordings:</strong> Natural environments with multiple species vocalizing simultaneously</li>
+              <li><strong>Controlled Recordings:</strong> High-quality single-species recordings for training</li>
+            </ul>
+          </div>
+        </div>
 
+        <!-- Data Augmentation Methods -->
+        <h3 class="title is-4">Data Augmentation Strategies</h3>
+        
+        <div class="columns is-centered">
+          <!-- Stitching. -->
+          <div class="column">
+            <div class="content">
+              <h4 class="title is-5">Stitching</h4>
+              <p>
+                We concatenate two or more audio segments to form longer sequences, thereby increasing temporal diversity and exposing the model to transitions across different species and acoustic contexts. This augmentation encourages the encoder to capture long-range dependencies in the recordings.
+              </p>
+              <video id="dollyzoom" autoplay controls muted loop playsinline height="100%" 
+                controlsList="nodownload"
+                onloadedmetadata="this.currentTime=5"
+                ontimeupdate="if(this.currentTime>20){this.currentTime=5; if(this.paused) this.play();}">
+                <source src="./static/videos/stitching.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Stitching. -->
+
+          <!-- Mixing. -->
+          <div class="column">
+            <h4 class="title is-5">Mixing</h4>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  We mix audio waveforms from different recordings by superimposing them, simulating overlapping vocalizations and complex natural soundscapes. This strategy trains the model to disentangle multiple sources and improves robustness to polyphonic bioacoustic environments.
+                </p>
+                <video id="matting-video" controls playsinline height="100%"
+                  controlsList="nodownload"
+                  onloadedmetadata="this.currentTime=5"
+                  ontimeupdate="if(this.currentTime>20){this.currentTime=5; if(this.paused) this.play();}">
+                  <source src="./static/videos/mixing.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Mixing. -->
+
+        <div class="columns is-centered">
+          <!-- Noise Addition. -->
+          <div class="column">
+            <div class="content">
+              <h4 class="title is-5">Noise Addition</h4>
+              <p>
+                We add synthetic or natural background noise to audio recordings, replicating common environmental disturbances such as wind, rain, or anthropogenic sounds. This augmentation improves the model's resilience to noisy conditions and enhances generalization to field recordings.
+              </p>
+              <video id="matting-video" controls muted loop playsinline height="100%" 
+                controlsList="nodownload"
+                onloadedmetadata="this.currentTime=5"
+                ontimeupdate="if(this.currentTime>20){this.currentTime=5; if(this.paused) this.play();}">
+                <source src="./static/videos/noise.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <!--/ Noise Addition. -->
+
+          <!-- Amplitude Reduction. -->
+          <div class="column">
+            <h4 class="title is-5">Amplitude Changes</h4>
+            <div class="columns is-centered">
+              <div class="column content">
+                <p>
+                  We randomly scale the amplitude of audio signals to mimic variability in microphone sensitivity, distance from the source, and propagation effects. This encourages the model to learn representations that are invariant to loudness and recording conditions.
+                </p>
+                <video id="matting-video" controls playsinline height="100%"
+                  controlsList="nodownload"
+                  onloadedmetadata="this.currentTime=0"
+                  ontimeupdate="if(this.currentTime>3){this.currentTime=0; if(this.paused) this.play();}">
+                  <source src="./static/videos/amplitude.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/ Amplitude Reduction. -->
+
+        <div class="content has-text-justified">
+          <p>
+            These augmentation strategies enable our model to generalize across diverse acoustic environments and recording conditions, while the unified dataset provides unprecedented scale for training robust bioacoustic foundation models.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+    <!--/ Dataset and Data Augmentation. -->
 
-    <!-- Animation. -->
+    <!-- Model Section -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Model Architecture</h2>
+        
+        <div class="content has-text-centered">
+          <img src="./static/images/model.png" alt="AudioSAM model architecture" class="image" style="display: block; margin-left: auto; margin-right: auto; max-width: 1000px; width: 100%; margin-bottom: 1.5em;">
+          <p class="is-size-6">
+            <em>Figure: Architecture of the AudioSAM foundation model for bioacoustic analysis.</em>
+          </p>
+        </div>
+        
+        <div class="content has-text-justified">
+          <p>
+            Our AudioSAM model is a 1B-parameter Vision Transformer encoder specifically designed for processing long bioacoustic sequences. The architecture leverages self-supervised learning through masked autoencoding to learn robust representations of animal vocalizations across diverse species and acoustic environments.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Model. -->
+
+    <!-- Results. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
 
         <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
@@ -360,22 +422,14 @@
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+          <div class="column has-text-centered">
+            <img src="./static/images/easyExample1.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Start Frame</p>
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
+          <div class="column has-text-centered">
+            <img src="./static/images/easyExample2.png"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
@@ -385,7 +439,7 @@
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -402,12 +456,83 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
+
+        <!-- Results Table -->
+        <h3 class="title is-4">Zero-Shot Detection Performance</h3>
+        <div class="content has-text-justified">
+          <p>
+            We evaluate our model's zero-shot performance on vocalization detection across multiple bioacoustic datasets, demonstrating superior generalization capabilities compared to existing methods.
+          </p>
+        </div>
+        
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>DCASE</th>
+                <th>EnaBirds</th>
+                <th>Hiceas</th>
+                <th>Rainforest</th>
+                <th>Gibbons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LLM w/o audio</td>
+                <td>0.000</td>
+                <td>0.001</td>
+                <td>0.210</td>
+                <td>0.000</td>
+                <td>0.013</td>
+              </tr>
+              <tr>
+                <td>SALMONN</td>
+                <td>0.005</td>
+                <td>0.004</td>
+                <td>0.097</td>
+                <td>0.002</td>
+                <td>0.005</td>
+              </tr>
+              <tr>
+                <td>BioLingual</td>
+                <td>0.036</td>
+                <td>0.109</td>
+                <td><strong>0.429</strong></td>
+                <td>0.004</td>
+                <td>0.018</td>
+              </tr>
+              <tr>
+                <td>NatureLM-audio</td>
+                <td>0.058</td>
+                <td>0.314</td>
+                <td>0.336</td>
+                <td>0.025</td>
+                <td>0.005</td>
+              </tr>
+              <tr>
+                <td><strong>Our Model</strong></td>
+                <td><strong>0.282</strong></td>
+                <td><strong>0.902</strong></td>
+                <td>0.304</td>
+                <td><strong>0.111</strong></td>
+                <td><strong>0.041</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="content has-text-justified">
+          <p class="has-text-centered">
+            <em>Table 1. Zero-shot F1 scores on vocalization detection datasets. The best metric is highlighted for each dataset.</em>
+          </p>
+        </div>
 
       </div>
     </div>
-    <!--/ Animation. -->
+    <!--/ Results. -->
 
 
     <!-- Concurrent Work. -->
@@ -446,7 +571,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
+  title     = {AudioSAM: A Bioacoustics Foundation Model for Automatic Annotation},
   journal   = {ICCV},
   year      = {2021},
 }</code></pre>
